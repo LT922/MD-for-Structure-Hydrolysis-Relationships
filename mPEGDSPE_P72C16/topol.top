@@ -1,0 +1,30 @@
+#include "../0-forcefields/charmm36-jul2022.ff/forcefield.itp"
+
+#include "mpeg2kdspe.prm"
+#include "p7c16.prm"
+
+#include "mpeg2kdspe.itp"
+#include "p7c16.itp"
+
+#include "../0-forcefields/charmm36-jul2022.ff/tip3p.itp"
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct		 fcx		fcy		   fcz
+   1	1		1000	   1000		  1000
+#endif
+
+; Include topology for ions
+#include "../0-forcefields/charmm36-jul2022.ff/ions.itp"
+
+[ system ]
+; Name
+pdllap7c16 in water
+
+[ molecules ]
+;Compound        #mols
+DSPE             30
+PTX              10
+
+SOL         103234
+NA               30

@@ -1,0 +1,13 @@
+
+# Generated simulation files
+*.xtc
+*.trr
+*.edr
+*.cpt
+*.tpr
+
+# Editor and system files
+.DS_Store
+*.swp
+*~
+#*#
